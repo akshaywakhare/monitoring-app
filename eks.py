@@ -1,3 +1,6 @@
+# creating a deployment and deploying to kubernetes using a python script
+# this can be manually achieved by using the deployment.yaml file on cli
+
 from kubernetes import client, config
  
 config.load_kube_config() 
@@ -17,7 +20,7 @@ deployment = client.V1Deployment(
                 containers=[
                     client.V1Container(
                         name="monitoring-app-container",
-                        image="157507484538.dkr.ecr.us-east-1.amazonaws.com/cloud_native_repo:latest",
+                        image="<image_url>",
                         ports=[client.V1ContainerPort(container_port=5000)]
                     )
                 ]

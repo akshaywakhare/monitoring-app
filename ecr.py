@@ -1,6 +1,7 @@
 import boto3
 
 # creating ecr repository using boto3 client provided by aws
+# this can also be manually done from aws console
 
 ecr_client=boto3.client('ecr')
 
